@@ -1,0 +1,41 @@
+{
+  "name": "my-awesome-greeter",
+  "version": "1.0.0",
+  "description": "A nice greeter",
+   "main": "lib/index.js",
+   "types": "lib/index.d.ts",
+  "scripts": {
+    "test": "jest --config jestconfig.json",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+ },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zural/my-awesome-greeter.git"
+  },
+  "keywords": ["Hello", "Greeter"],
+   "author": "C-J",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zural/my-awesome-greeter/issues"
+  },
+  "homepage": "https://github.com/zural/my-awesome-greeter#readme",
+  "devDependencies": {
+    "@types/jest": "^24.0.11",
+    "jest": "^24.7.1",
+    "prettier": "^1.17.0",
+    "ts-jest": "^24.0.2",
+    "tslint": "^5.16.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.4.5"
+  },
+  "files": [
+    "lib/**/*"
+  ]
+}
