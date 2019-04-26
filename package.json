@@ -1,9 +1,9 @@
 {
   "name": "my-awesome-greeter-zural",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A nice greeter",
-   "main": "lib/index.js",
-   "types": "lib/index.d.ts",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "test": "jest --config jestconfig.json",
     "build": "tsc",
@@ -14,13 +14,16 @@
     "preversion": "npm run lint",
     "version": "npm run format && git add -A src",
     "postversion": "git push && git push --tags"
- },
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zural/my-awesome-greeter.git"
   },
-  "keywords": ["Hello", "Greeter"],
-   "author": "C-J",
+  "keywords": [
+    "Hello",
+    "Greeter"
+  ],
+  "author": "C-J",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/zural/my-awesome-greeter/issues"
